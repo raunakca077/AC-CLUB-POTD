@@ -1,4 +1,7 @@
 //Sort colors question on leetcode
+//Question link-https://leetcode.com/problems/sort-colors/
+
+//Approach : using two for loops
 
 class Solution {
 public:
@@ -28,3 +31,5 @@ public:
         
     }
 };
+
+//Time complexity=O(N)
