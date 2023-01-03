@@ -1,0 +1,30 @@
+//Sort colors question on leetcode
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {       //Function for sorting
+        int j=0;
+        int n=nums.size();                     //Loop for moving all zeros to leftmost side
+        for(int i=0;i<n;i++)  
+        {   
+            if(nums[i]==0)
+            {
+                int temp=nums[j];              //swapping digits
+                nums[j++]=0;
+                nums[i]=temp;
+
+            }
+        }
+        for(int i=j;i<n;i++)                    //Loop for setti right position for digit 1 and so digit 2 gets settle automatically
+        {   
+            if(nums[i]==1)
+            {
+                int temp=nums[j];
+                nums[j++]=nums[i];
+                nums[i]=temp;
+
+            }
+        }
+        
+    }
+};
