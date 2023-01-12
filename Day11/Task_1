@@ -1,0 +1,32 @@
+//To make zeros double and move remaing elements to right
+
+//Q_link:https://leetcode.com/problems/duplicate-zeros/?fbclid=IwAR1Gvlmgcl7xRMCbF4VEo8Z4I5ePLeW3I7i9cFb16nvTHkN29-XDJHpp0F8
+
+
+class Solution {
+public:
+    void duplicateZeros(vector<int>& arr) {int n=arr.size();
+        vector<int>v;
+        int j=0;
+        for(auto x:arr)
+        {
+            if(x==0)
+            {
+                v.push_back(0);
+                v.push_back(0);
+                j++;
+            }else
+            {
+                v.push_back(x);
+                j++;
+            }
+            
+        }int n2=v.size();
+        for(int i=n;i<n2;i++)
+        v.pop_back();
+        arr=v;
+
+        
+    }
+};
+
