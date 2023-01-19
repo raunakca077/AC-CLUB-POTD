@@ -5,6 +5,7 @@
 
 // Approach : Comparing two adjacent elements linearly
 
+
 bool arraySortedOrNot(int arr[], int n) {
     int flag=0;
     for(int x=0;x<n-1;x++)
